@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="bg-white border-b border-gray-300">
+            <nav className="bg-white md:border-b md:border-gray-300">
                 <div className="max-w-screen-2xl mx-auto px-2 sm:px-2 lg:px-4 bg-white pt-1">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo Top Left */}
@@ -45,10 +45,10 @@ export default function Navbar() {
 
                         {/* Desktop Links */}
                         <div className="hidden md:flex items-center justify-center flex-grow space-x-4">
-                            <Link href="/contact" className="text-black hover:underline">
+                            <Link href="/Contact" className="text-black hover:underline">
                                 Contact Us
                             </Link>
-                            <Link href="/visit" className="text-black hover:underline">
+                            <Link href="/Visit" className="text-black hover:underline">
                                 Visit
                             </Link>
                         </div>
@@ -116,68 +116,170 @@ export default function Navbar() {
 
                     {/* Mobile Hamburger Menu */}
                     <div
-                        className={`md:hidden fixed left-0 right-0 bg-black text-white border border-gray-300 shadow-lg p-4 space-y-4 transition-all ease-in-out duration-300 ${
+                        className={`md:hidden rounded-lg fixed py-5 text-2xl left-0 right-0 bg-black text-white border border-gray-300 shadow-lg transition-all ease-in-out duration-300 ${
                             isMenuOpen ? 'top-16' : 'top-[-100%]'
                         }`}
                     >
-                        <Link href="/contact" className="block hover:underline px-4 py-8">
-                            Contact Us
+                        <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline px-4 py-5 border-b border-t border-gray-300">
+                            Home
                         </Link>
-                        <Link href="/visit" className="block hover:underline">
-                            Visit
-                        </Link>
-                        <Link href="/about" className="block hover:underline">
-                            About
-                        </Link>
-                        <div>
+                        <div className="border-b border-gray-300">
                             <button
-                                onClick={() => toggleSubmenu('services')}
-                                className="block w-full text-left hover:underline"
+                                onClick={() => toggleSubmenu('Academics')}
+                                className="block w-full text-left hover:underline px-4 py-5"
                             >
-                                Services <ChevronDown className="inline-block" />
+                                Academics <ChevronDown className="inline-block" />
                             </button>
-                            {expandedItem === 'services' && (
-                                <div className="ml-4 space-y-2">
-                                    <Link href="/services/spine" className="block hover:underline">
-                                        Spine Care
+                            {expandedItem === 'Academics' && (
+                                <div className="ml-4 space-y-4">
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Academics
                                     </Link>
-                                    <Link href="/services/rehab" className="block hover:underline">
-                                        Rehabilitation
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Academics
                                     </Link>
-                                    <Link href="/services/pain" className="block hover:underline">
-                                        Pain Management
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Academics
                                     </Link>
                                 </div>
                             )}
                         </div>
+                        <div className="border-b border-gray-300">
+                            <button
+                                onClick={() => toggleSubmenu('Admissions and Tuition')}
+                                className="block w-full text-left hover:underline px-4 py-5"
+                            >
+                                Admissions and Tuition <ChevronDown className="inline-block" />
+                            </button>
+                            {expandedItem === 'Admissions and Tuition' && (
+                                <div className="ml-4 space-y-4">
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Admissions and Tuition
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Admissions and Tuition
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Admissions and Tuition
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+                        <div className="border-b border-gray-300">
+                            <button
+                                onClick={() => toggleSubmenu('Campus and Community')}
+                                className="block w-full text-left hover:underline px-4 py-5"
+                            >
+                                Campus and Community <ChevronDown className="inline-block" />
+                            </button>
+                            {expandedItem === 'Campus and Community' && (
+                                <div className="ml-4 space-y-4">
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Campus and Community
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Campus and Community
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        Campus and Community
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+                        <div className="border-b border-gray-300">
+                            <button
+                                onClick={() => toggleSubmenu('About')}
+                                className="block w-full text-left hover:underline px-4 py-5"
+                            >
+                                About <ChevronDown className="inline-block" />
+                            </button>
+                            {expandedItem === 'About' && (
+                                <div className="ml-4 space-y-4">
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        About
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        About
+                                    </Link>
+                                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline">
+                                        About
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+                        <Link href="/Contact" onClick={() => setIsMenuOpen(false)} className="block hover:underline px-4 py-5 border-b border-gray-300">
+                            Contact Us
+                        </Link>
+                        <Link href="/Visit" onClick={() => setIsMenuOpen(false)} className="block hover:underline px-4 py-5 border-b border-gray-300">
+                            Visit
+                        </Link>
                     </div>
                 </div>
             </nav>
 
             {/* Second Navbar */}
-            <div className="bg-gray-100 border-b border-gray-300">
+            <div className="bg-white md:border-b md:border-gray-300">
                 <div className="max-w-screen-2xl mx-auto px-2 sm:px-2 lg:px-4">
                     <div className="hidden md:flex space-x-6 py-2">
+                        <Link href="/" className="text-black hover:underline">
+                            Home
+                        </Link>
                         <div className="relative group">
-                            <button className="text-black hover:underline">Services</button>
+                            <button className="text-black hover:underline">Academics</button>
                             <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
-                                <Link href="/services/spine" className="block px-4 py-2 hover:bg-gray-100">
-                                    Spine Care
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Academics1
                                 </Link>
-                                <Link href="/services/rehab" className="block px-4 py-2 hover:bg-gray-100">
-                                    Rehabilitation
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Academics2
                                 </Link>
-                                <Link href="/services/pain" className="block px-4 py-2 hover:bg-gray-100">
-                                    Pain Management
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Academics3
                                 </Link>
                             </div>
                         </div>
-                        <Link href="/research" className="text-black hover:underline">
-                            Research
-                        </Link>
-                        <Link href="/education" className="text-black hover:underline">
-                            Education
-                        </Link>
+                        <div className="relative group">
+                            <button className="text-black hover:underline">Admissions and Tuition</button>
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Admissions and Tuition
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Admissions and Tuition
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Admissions and Tuition
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="relative group">
+                            <button className="text-black hover:underline">Campus and Community</button>
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Campus and Community
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Campus and Community
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    Campus and Community
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="relative group">
+                            <button className="text-black hover:underline">About</button>
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    About
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    About
+                                </Link>
+                                <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                                    About
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
