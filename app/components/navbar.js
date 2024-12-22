@@ -26,7 +26,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="bg-white md:border-b md:border-gray-300 font-sans">
-                <div className="max-w-screen-2xl mx-auto px-2 sm:px-2 lg:px-4 bg-white pt-1">
+                <div className="max-w-screen-2xl mx-auto sm:px-2 lg:px-4 bg-white pt-1">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo Top Left */}
                         <div className="flex-shrink-0">
