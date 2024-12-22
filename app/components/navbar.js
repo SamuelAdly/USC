@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="bg-white md:border-b md:border-gray-300">
+            <nav className="bg-white md:border-b md:border-gray-300 font-sans">
                 <div className="max-w-screen-2xl mx-auto px-2 sm:px-2 lg:px-4 bg-white pt-1">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo Top Left */}
@@ -45,10 +45,10 @@ export default function Navbar() {
 
                         {/* Desktop Links */}
                         <div className="hidden md:flex items-center justify-center flex-grow space-x-4">
-                            <Link href="/Contact" className="text-black hover:underline">
+                            <Link href="/Contact" className="text-black hover:underline text-sm">
                                 Contact Us
                             </Link>
-                            <Link href="/Visit" className="text-black hover:underline">
+                            <Link href="/Visit" className="text-black hover:underline text-sm">
                                 Visit
                             </Link>
                         </div>
@@ -116,8 +116,8 @@ export default function Navbar() {
 
                     {/* Mobile Hamburger Menu */}
                     <div
-                        className={`md:hidden rounded-lg fixed py-5 text-2xl left-0 right-0 bg-black text-white border border-gray-300 shadow-lg transition-all ease-in-out duration-300 ${
-                            isMenuOpen ? 'top-16' : 'top-[-100%]'
+                        className={`md:hidden rounded-lg absolute py-5 z-50 text-2xl left-0 right-0 bg-black text-white border border-gray-300 shadow-lg transition-all ease-in-out duration-300 ${
+                            isMenuOpen ? 'top-16 opacity-100' : 'top-[-100%] opacity-0 pointer-events-none'
                         }`}
                     >
                         <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:underline px-4 py-5 border-b border-t border-gray-300">
@@ -218,7 +218,7 @@ export default function Navbar() {
             </nav>
 
             {/* Second Navbar */}
-            <div className="bg-white md:border-b md:border-gray-300">
+            <div className="bg-white md:border-b md:border-gray-300 font-sans">
                 <div className="max-w-screen-2xl mx-auto px-2 sm:px-2 lg:px-4">
                     <div className="hidden md:flex space-x-6 py-2">
                         <Link href="/" className="text-black hover:underline">
@@ -226,7 +226,7 @@ export default function Navbar() {
                         </Link>
                         <div className="relative group">
                             <button className="text-black hover:underline">Academics</button>
-                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg z-50">
                                 <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
                                     Academics1
                                 </Link>
@@ -240,7 +240,7 @@ export default function Navbar() {
                         </div>
                         <div className="relative group">
                             <button className="text-black hover:underline">Admissions and Tuition</button>
-                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg z-50">
                                 <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
                                     Admissions and Tuition
                                 </Link>
@@ -254,7 +254,7 @@ export default function Navbar() {
                         </div>
                         <div className="relative group">
                             <button className="text-black hover:underline">Campus and Community</button>
-                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg z-50">
                                 <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
                                     Campus and Community
                                 </Link>
@@ -268,7 +268,7 @@ export default function Navbar() {
                         </div>
                         <div className="relative group">
                             <button className="text-black hover:underline">About</button>
-                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg">
+                            <div className="absolute hidden group-hover:block bg-white shadow-lg border mt-2 rounded-lg z-50">
                                 <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
                                     About
                                 </Link>
