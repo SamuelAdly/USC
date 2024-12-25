@@ -36,7 +36,7 @@ export default function PageNav({ underlinedLink }) {
             </div>
 
             {/* Desktop Page Nav Header */}
-            <div className="font-sans text-sm max-w-screen-2xl mx-auto lg:px-4 sm:px-2">
+            <div className="font-sans text-md max-w-screen-2xl mx-auto lg:px-4 sm:px-2">
                 <ul className="hidden md:flex sticky top-0 bg-white z-10 px-4 py-4 space-x-4">
                     {links.map((link) => (
                         <li key={link.label} className="py-2">
