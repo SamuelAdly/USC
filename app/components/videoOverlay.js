@@ -11,7 +11,7 @@ export default function VideoOverlay ({videoLink, thumbnail, title, duration}) {
 
     return (
         <>
-            <div className="relative max-w-screen-xl mx-auto group overflow-hidden rounded-lg">
+            <div className="relative max-w-screen-2xl mx-auto group overflow-hidden rounded-lg">
                 {/* Thumbnail */}
                 <Image
                     src={thumbnail}
@@ -46,7 +46,7 @@ export default function VideoOverlay ({videoLink, thumbnail, title, duration}) {
                 >
                     {/* Close Button */}
                     <button
-                        className="absolute top-4 right-4 text-white text-2xl z-50"
+                        className="absolute top-4 right-4 bg-black shadow-lg p-3 rounded-full text-white text-2xl z-50"
                         onClick={closeModal}
                     >
                         <X/>
