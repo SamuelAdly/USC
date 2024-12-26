@@ -53,31 +53,90 @@ export default function Home() {
           duration="4:12"
         />
 
-        <section className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center text-center justify-center">
-          <div className="p-8 rounded-lg transition-all transform hover:scale-105 bg-white hover:text-lg">
-            <h1 className="text-5xl mb-2 font-bold hover:scale-125 transition-transform duration-300">7</h1>
-            <span className="font-semibold block mt-2">
+        <section className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center">
+
+          <div className="flex flex-col items-center">
+            <h1 className="text-6xl font-bold text-black">7</h1>
+            <span className="text-lg font-medium text-gray-600 mt-2">
               Full-time Faculty
             </span>
           </div>
-          <div className="p-8 rounded-lg transition-all transform hover:scale-105 bg-white hover:text-lg">
-            <h1 className="text-5xl mb-2 font-bold text-blue-700 hover:scale-125 transition-transform duration-300">#1</h1>            
-            <span className="font-semibold block text-blue-700 mt-2">Hospital in the Nation
+
+          <div className="flex flex-col items-center group transition-all duration-300">
+            <h1 className="text-6xl font-bold text-blue-700 transform group-hover:scale-110 transition-transform duration-300">#1</h1>            
+            <span className="text-lg font-medium text-blue-700 mt-4">Hospital in the Nation
+            </span>
+            <div class="w-16 h-1 bg-blue-700 mt-4 transition-all duration-300 group-hover:w-48"></div>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <h1 className="text-6xl font-bold text-black">2</h1>
+            <span className="text-lg font-medium text-gray-600 mt-2">ACGME approved positions
             </span>
           </div>
-          <div className="p-8 rounded-lg transition-all transform hover:scale-105 bg-white hover:text-lg">
-            <h1 className="text-5xl mb-2 font-bold hover:scale-125 transition-transform duration-300">2</h1>
-            <span className="font-semibold block mt-2">ACGME approved positions
-            </span>
-          </div>
+
         </section>
-      </div>
-      <section className="grid grid-cols-2">
-        <div>hello
+      
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+
+        <div>
+          <Image
+            src="/image.png"
+            width={1280}
+            height={720}
+            alt="Surgery Experience Image"
+            class="w-full rounded-lg object-cover"
+          />
         </div>
-        <div>hello
+
+          <div className="flex flex-col justify-center">
+            <h2 className="text-2xl font-bold mb-4">Your training experience</h2>
+            <p className="text-gray-700 mb-6">
+              As a fellow at Mayo Clinic, you’ll have access to robust clinical,
+              educational, and research resources. You’ll find support both inside and
+              outside of the campus to promote physical and mental wellness and ensure
+              your work/life balance.
+            </p>
+            <Link
+              href="/"
+              className="text-blue-600 underline underline-offset-2 relative group mb-2"
+            >
+              <span className="hover:bg-yellow-200 hover:text-black transition-colors duration-300">
+                More about the curriculum
+              </span>
+            </Link>
+            <Link
+              href="/"
+              className="text-blue-600 underline underline-offset-2 relative group"
+            >
+              <span className="hover:bg-yellow-200 hover:text-black transition-colors duration-300">
+                More about life as a fellow
+              </span>
+            </Link>
         </div>
+
+        <div>
+        <Image
+            src="/image.png"
+            width={1280}
+            height={720}
+            alt="Directors Welcome Image"
+            class="w-full rounded-lg object-cover"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center">
+            <h2 className="text-2xl font-bold mb-4">Director’s welcome</h2>
+            <p className="text-gray-700 mb-6">
+              Our program provides you with one-on-one mentorship as well as the
+              flexibility to work with other staff members on interesting cases. Time
+              for research is built into the schedule, and our exceptional facilities
+              support your growth.
+            </p>
+        </div>
+
       </section>
+      </div>
       <ScrollToTop/>
     </div>
   );
